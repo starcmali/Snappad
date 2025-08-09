@@ -25,11 +25,11 @@ jobs:
       run: npm ci
 
     - name: Build Angular app
-      run: npm run build -- --configuration production --base-href="/"
+      run: npm run build -- --configuration production --base-href="/Snappad"
 
-    - name: Move build files to root
-      run: |
-        shopt -s dotglob
-        mv dist/snappad/* ./
-        rm -rf dist
-
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: dev
+        publish_dir: dist/snappad
