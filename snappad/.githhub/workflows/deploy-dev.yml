@@ -28,7 +28,7 @@ jobs:
       run: npm run build -- --configuration production --base-href="/snappad/browser/"
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
+      uses: peaceiris/actions-dev@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: dev
