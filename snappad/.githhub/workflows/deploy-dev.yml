@@ -25,11 +25,11 @@ jobs:
       run: npm ci
 
     - name: Build Angular app
-      run: npm run build -- --configuration production --base-href="/"
+      run: npm run build -- --configuration production --base-href="/snappad/browser/"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-dev@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: dev
-        publish_dir: dist/snappad/browser
+        publish_dir: dist/snappad/
