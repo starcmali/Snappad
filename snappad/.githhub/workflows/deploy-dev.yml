@@ -32,4 +32,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: dev
-        publish_dir: dist/snappad
+        publish_dir: dist/snappad/browser
